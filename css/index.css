@@ -1,0 +1,134 @@
+/*===========================
+    MY PRESETS
+=============================*/
+:root{
+    --ff: "Nunito", Arial, Helvetica, sans-serif;
+    --ff-2: "SourceSansPro", Arial, Helvetica, sans-serif;
+    --s1: 0.063rem;
+    --s2: calc(var(--s1) * 2);
+    --primary-clr: #2225560;
+    --padding: 1.5rem;
+    --main-fs: 1.7rem;
+    --bg-clr: #ffffff82;
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+ }
+/*===========================
+    IMPORTED FONTS
+=============================*/
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+/*===========================
+    BODY WITH RESET
+=============================*/
+*{
+    /* outline: 3px solid limegreen !important; */
+    /* background: rgb(0 100 0 /0.1) !important; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff);
+}
+body{
+    background-color: #ccccff ;
+}
+/*===========================
+   MAIN DIVISION STARTS HERE
+=============================*/
+p{font-size: var(--main-fs);}
+div.wrapper {
+	max-width: 97rem;
+	background-color: #ffffff91;
+	margin: 1rem auto;
+	box-shadow: var(--shadow);
+	border-radius: 0.19rem;
+	background-image: url(../image/v88icon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: center;
+    /* height: 20rem; */
+}
+    header {
+        padding: 1rem;
+        border-bottom: 0.25rem solid gray;
+    }
+        h3 {
+            font-size: 4rem;
+            display: inline-block;
+        }
+        .user, a {
+            display: inline;
+            float: right;
+            margin: 1rem 1rem 0 0;
+            font-size: 1.4rem;
+        }
+    article {
+        padding: var(--padding);
+        background-color: var(--bg-clr);
+    }
+        h1 {
+            font-size: 3.5em;
+        }
+    section {
+        padding: var(--padding);
+        background-color: var(--bg-clr);
+        margin: 0 0 6rem 0;
+    }
+        p.content {
+            background-color: #ccccff70;
+            padding: 1rem;
+            border-radius: 1.2rem;
+        }
+        label {
+            font-size: 3.5rem;
+        }
+        textarea {
+            display: block;
+            margin: 2rem;
+            min-width: 96%;
+            min-height: 11ch;
+            font-size: var(--main-fs);
+            padding: 1rem;
+        }
+        .post {
+            margin: 0 auto 0 78rem;
+            display: block;
+            font-size: 1.8rem;
+            padding: 0.625rem;
+            background-color: #ccccff;
+        }
+        .userWhoReview {
+            font-weight: bold;
+            padding: 1rem 0 1rem;
+        }
+    div.reply {
+        max-width: 53%;
+        margin: 0 auto 0 45rem;
+    }
+        .reply.content {
+            background-color: #80808014;
+        }
+        input.reply {
+            min-width: 100%;
+            margin: 1rem 0;
+            min-height: 5ch;
+            padding: 1rem 2.5rem;
+            font-size: var(--main-fs);
+            border: 0.313rem solid #42428085;
+            border-radius: 50rem;
+        }
+        .replyBtn {
+            font-size: 1.4rem;
+            padding: 0.625rem 4rem;
+            border-radius: 0.6rem;
+            background: #1a1a1a1f;
+            font-weight: 600;
+            display: block;
+            margin: 0 auto 0 35rem;
+            box-sizing: var(--shadow);
+        }

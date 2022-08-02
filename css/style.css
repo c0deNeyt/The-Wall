@@ -1,0 +1,185 @@
+/*===========================
+    MY PRESETS
+=============================*/
+:root{
+    --ff: "Nunito", Arial, Helvetica, sans-serif;
+    --ff-2: "SourceSansPro", Arial, Helvetica, sans-serif;
+    --s1: 0.063rem;
+    --s2: calc(var(--s1) * 2);
+    --primary-clr: #2225560;
+
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+ }
+/*===========================
+    IMPORTED FONTS
+=============================*/
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+/*===========================
+    BODY WITH RESET
+=============================*/
+*{
+    /* outline: 3px solid limegreen !important; */
+    /* background: rgb(0 100 0 /0.1) !important; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff);
+}
+body{
+    background-color: #ccccff ;
+}
+/*===========================
+   MAIN DIVISION STARTS HERE
+=============================*/
+.customInput {
+	margin: 4rem 8rem -14px -190px;
+	font-size: 2rem;
+}
+div.wrapper {
+	max-width: 44rem;
+	padding: 3rem;
+	background-color: #ffffff91;
+	margin: 5rem auto;
+	box-shadow: var(--shadow);
+	border-radius: 1rem;
+	background-image: url(../image/v88icon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+    h5.card-title {
+        margin: 0 auto;
+        font-size: 61px;
+        font-weight: bold;
+        font-family: var(--ff-2);
+        text-shadow: -2px 3px 2px rgba(0,0,0,0.29);
+        color: #7475bff7;
+        text-align: center;
+    }
+    img {
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+    .errorField {
+        min-width: 70%;
+        background-color: #df000038;
+        padding: 0.625rem;
+        margin: 1rem;
+        border-radius: 0.62rem;
+        color: #bd0303d6;
+        font-size: 1.29rem;
+        font-weight: bold;
+    }
+        /* .blink_me {animation: blinker 1s linear infinite;} */
+        @keyframes blinker {50% { opacity: 0.4; }}
+
+        div.errorField  p {
+            animation: blinker 1s linear infinite;
+            margin: 0;
+            display: block;
+        }
+    .successMsg {
+        min-width: 70%;
+        background-color: #26ae005e;
+        padding: 0.625rem;
+        margin: 1rem;
+        border-radius: 0.62rem;
+        color: #f9f9f9;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+        div.successMsg p{
+            font-size: 1.3rem;
+        }
+
+    form.form {
+        margin: 2.5rem 0 0 0;
+    }
+        label {
+            display: block;
+            margin: 1rem 0;
+            text-align: justify;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #424242a8;
+            text-shadow: 5px 0px 2px rgba(255, 227, 227, 0.46);
+            padding: 14px 0 0 2rem;
+            word-wrap: break-word;
+            max-width: 10rem;
+            max-height: 2.25rem;
+            line-height: 1.625rem;
+        }
+        .resetPass.signUp {
+            padding: 0 0 0 18.6rem;
+        }
+        .signUp {
+            display: inline-block;
+            margin: 0.313rem auto 0 1rem;
+            text-align: center;
+            font-size: 1.09rem;
+            padding: 1rem 0 0 0;
+        }
+        .gotoSignIn {
+            display: inline-block;
+            margin: 2rem auto 0 29.5rem;
+            text-align: center;
+            font-size: 1.09rem;
+            padding: 1rem 0 0 0;
+        }
+
+        a:hover {
+            color: #0d0d0dd4;
+        }
+        input {
+            padding: 0.313rem;
+            border-radius: 0.313rem;
+            border: 0.063rem solid #80808085;
+            margin: 0 0 0 0.625rem;
+            position: relative;
+            bottom: 2.25rem;
+            left: 10rem;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgba(73, 73, 73, 0.212);
+            opacity: 1; /* Firefox */
+          }
+        input[name="contactNumber"] {
+            bottom: 3.188rem;
+        }
+        .password {
+            margin: 3rem 0 0 0;
+        }
+        .confirmPassword {
+            margin: 0;
+        }
+        input.registerBtn {
+            box-shadow: -4px 6px 19px -8px rgba(0,0,0,0.39);
+            color: #4d4b4b;
+            font-weight: bold;
+            background-color: #b5b5de;
+            display: block;
+            margin: 4.5rem 15.125rem 0 auto;
+            font-size: 1.2rem;
+            padding: 0.313rem 2rem;
+        }
+        input.logoutBtn {
+            box-shadow: -4px 6px 19px -8px rgba(0,0,0,0.39);
+            color: #4d4b4b;
+            font-weight: bold;
+            background-color: #b5b5de;
+            display: block;
+            margin: 4.5rem 24.125rem 0 auto;
+            font-size: 1.2rem;
+            padding: 0.313rem 2rem;
+        }
+
+
