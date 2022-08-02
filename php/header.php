@@ -4,9 +4,9 @@ if(isset($_SESSION['userData'])){
 }
 ?>
         <header>
-            <h3>V88 Blog</h3>
+            <h3>The Wall</h3>
             <a class='signIn' <?=(isset($s))?
-"href='#' name='out'>Sign Out</a>" :
+"href='#' name='out'>Sign Out</a>"."\r\n" :
 "href='php/signIn.php'>Sign In</a>";
 ?>
 

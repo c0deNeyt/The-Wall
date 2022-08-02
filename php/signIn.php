@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Blog | WEB</title>
+    <title> The wall | WEB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../image/favicon.png">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -21,7 +21,7 @@
     <script src="../js/index.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="signWrapper">
     <h5 class="card-title">SIGN IN</h5>
 <?= validationMsg();?>
     <form enctype="multipart/form-data"  autocomplete="off" class="form" action="process.php" method="post">

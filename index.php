@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Blog | WEB</title>
+    <title> The Wall | WEB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/favicon.png">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -20,22 +20,22 @@
   <body>
     <div class="wrapper">
 <?php
-include("php/header.php");
+  include("php/header.php");
 ?>
-        <article>
-            <h1>Rumours</h1>
-            <p>"So, what do you think?" he asked nervously. He wanted to know the answer, but at the same time, he didn't. He'd put his heart and soul into the project and he wasn't sure he'd be able to recover if they didn't like what he produced. The silence from the others in the room seemed to last a lifetime even though it had only been a moment since he asked the question. "So, what do you think?" he asked again.</p>
-        </article>
+        <form class="share" method="post" action="php/process.php">
+            <input type="hidden" name="reviewAction" value="write">
+            <label>Share you thoughts!!
+                <textarea name="latestReview" ></textarea>
+            </label>
+            <input class="post" type="submit" value="Share">
+        </form>
         <section>
-<?php
-require("php/review.php");
-?>
+<?= displayReview(); ?>
         </section>
     </div>
   </body>
 </html>
-<form method="post" name="logOut" class="logOut">
-    <input type="hidden" name="logoutAction" value="logout">
+<form method="post" name="logOut">
+    <input type="hidden" name="logoutAction" value="show">
     <input type="submit" class="sentReq" style="display: none;">
 </form>
-p>

@@ -3,6 +3,6 @@
             <label>Leave a Review
                 <textarea name="latestReview" ></textarea>
             </label>
-            <input class="post" type="submit" value="Post a review">
+            <input class="post" type="submit">
         </form>
 <?= displayReview(); ?>

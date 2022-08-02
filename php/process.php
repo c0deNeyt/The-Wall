@@ -3,20 +3,21 @@
     require ("new-connection.php");
 
     //reset AJAX request
-    if(isset($_POST['request']) == 1){
+    if(isset($_POST['request']) && isset($_POST['request']) == 1){
         resetPass($_POST);
     }
     //Review
     if(isset($_POST['reviewAction']) == "write"){
         reviewAction($_POST);
     }
-    //Review
+    //Reply
     if(isset($_POST['replyAction']) == "send"){
         replyAction($_POST);
     }
     function replyAction($p){
         if(isset($_SESSION['userData']) && (!empty(trim($p['composedReply'])))){
             $d = $_SESSION['userData'];
+            $d['postId'] = escape_this_string($p['replyId']);
             $reply = escape_this_string($p['composedReply']);
             $id = escape_this_string($d['id']);
             $revId = escape_this_string($p['replyId']);
@@ -29,7 +30,6 @@
             die();
         }
         else if(isset($_SESSION['userData']) && (empty(trim($p['composedReply'])))){
-            echo "empty Value";
             header("Location: ../index.php");
             die();
         }
@@ -39,15 +39,17 @@
             die();
         }
     }
+
     function displayReview(){
+        // var_dump($_SESSION);
         $query = "SELECT CONCAT(`first_name`,' ', `last_name`) AS name,
-                         DATE_FORMAT(`reviews`.`create_time`, '%M %D %Y %I:%i%p') AS date,
-                        `reviews`.`content` AS review,
-                        `reviews`.`review_id` AS rId
-                FROM `reviews`
-                INNER JOIN `users`
-                ON `reviews`.`user_id` = `users`.`user_id`
-                ORDER BY `reviews`.`create_time` DESC";
+        DATE_FORMAT(`reviews`.`create_time`, '%M %D %Y %I:%i%p') AS date,
+        `reviews`.`content` AS review,
+        `reviews`.`review_id` AS rId
+        FROM `reviews`
+        INNER JOIN `users`
+        ON `reviews`.`user_id` = `users`.`user_id`
+        ORDER BY `reviews`.`create_time` DESC";
         $rawData = fetch_all($query);
         foreach($rawData as $key){
             $n = $key['name'];
@@ -62,6 +64,7 @@
                 include('reply.php');
             }
         }
+
     }
     function getAllReplies($revId){
         $query = "SELECT CONCAT(`first_name`,' ', `last_name`) AS name,
@@ -143,6 +146,7 @@
                 $_SESSION['userData'] = array();
                 $_SESSION['userData']['id'] =  $user['id'];
                 $_SESSION['userData']['name'] =  $user['name'];
+                $_SESSION['userData']['postId'] = 0;
                 header("Location: ../index.php");
                 die();
             }
